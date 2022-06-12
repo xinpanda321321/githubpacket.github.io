@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="demo">
+	<h1>Ajax</h1>
+	<button type="button" onclick="loadJson()">Change Content</button>
+	<p id="school"></p>
+	<p id="program"></p>
+	<p id="type"></p>
+	<p id="year"></p>
+</div>
+
+<script>
+	function loadJson() {
+		let response = fetch("./test.json")
+		.then(response => {
+		   return response.json();
+		})
+		.then(jsondata => console.log(jsondata));
+
+		if(response.status == 200) {
+			var data = response.data
+			document.getElementById("school").innerHTML = "School : " + data["School"];
+			document.getElementById("program").innerHTML = "Program/Major : " + data["Program"];
+			document.getElementById("type").innerHTML = "Type : " + data["Type"];
+			document.getElementById("year").innerHTML = "Year : " + data["Year"];
+		}
+	}
+</script>
+
+</body>
+</html>

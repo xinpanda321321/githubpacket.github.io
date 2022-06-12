@@ -15,12 +15,13 @@
 	function loadJson() {
 		let response = fetch("./test.json")
 		.then(response => {
-		   return response.json();
+			console.log(response);
+			return response.json();
 		})
 		.then(jsondata => console.log(jsondata));
 
-		console.log('---------------');
-		console.log(response);
+		// console.log('---------------');
+		// console.log(response);
 
 		// if(response.status == 200) {
 		// 	console.log(response);

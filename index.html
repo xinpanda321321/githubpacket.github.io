@@ -19,14 +19,17 @@
 		})
 		.then(jsondata => console.log(jsondata));
 
-		if(response.status == 200) {
-			console.log(response);
-			// var data = response.data
-			document.getElementById("school").innerHTML = "School : " + response["School"];
-			document.getElementById("program").innerHTML = "Program/Major : " + response["Program"];
-			document.getElementById("type").innerHTML = "Type : " + response["Type"];
-			document.getElementById("year").innerHTML = "Year : " + response["Year"];
-		}
+		console.log('---------------');
+		console.log(response);
+
+		// if(response.status == 200) {
+		// 	console.log(response);
+		// 	// var data = response.data
+		// 	document.getElementById("school").innerHTML = "School : " + response["School"];
+		// 	document.getElementById("program").innerHTML = "Program/Major : " + response["Program"];
+		// 	document.getElementById("type").innerHTML = "Type : " + response["Type"];
+		// 	document.getElementById("year").innerHTML = "Year : " + response["Year"];
+		// }
 	}
 </script>
 

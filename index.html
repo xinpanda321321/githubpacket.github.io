@@ -20,6 +20,7 @@
 		.then(jsondata => console.log(jsondata));
 
 		if(response.status == 200) {
+			console.log(response);
 			var data = response.data
 			document.getElementById("school").innerHTML = "School : " + data["School"];
 			document.getElementById("program").innerHTML = "Program/Major : " + data["Program"];

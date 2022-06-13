@@ -9,7 +9,6 @@ function loadJson(){
     })
     .then(jsondata => {
         console.log(jsondata);
-        console.log(jsondata["School"]);
         for(let i = 0; i < jsondata.length; i++) {
 			var table = document.getElementById("myTable");
 			var row = table.insertRow(i + 1);

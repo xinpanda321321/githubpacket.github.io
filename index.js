@@ -9,9 +9,10 @@ function loadJson(){
     })
     .then(jsondata => {
         console.log(jsondata);
+        console.log(jsondata["School"]);
         for(let i = 0; i < jsondata.length; i++) {
 			var table = document.getElementById("myTable");
-			var row = table.insertRow(i);
+			var row = table.insertRow(i + 1);
 			var cel1 = row.insertCell(0);
 			var cel2 = row.insertCell(1);
 			var cel3 = row.insertCell(2);

@@ -12,7 +12,7 @@ function loadJson(){
     .then(jsondata => {
         console.log(jsondata);
         count = jsondata.length
-        for(let i = 0; i < jsondata.length; i++) {
+        for(let i = 0; i < count; i++) {
 			var table = document.getElementById("myTable");
 			var row = table.insertRow(i + 1);
 			var cel1 = row.insertCell(0);

@@ -1,46 +1,28 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="index.js"></script>
+</head>
 <body>
-
 <div id="demo">
 	<h1>Ajax</h1>
-	<button type="button" onclick="loadJson()">Change Content</button>
-	<p id="school"></p>
-	<p id="program"></p>
-	<p id="type"></p>
-	<p id="year"></p>
+	<button type="button" onclick="loadJson()">Send Ajax</button>
+	<br />
+	<table class="styled-table">
+	    <thead>
+	        <tr>
+	            <th>School</th>
+	            <th>Program/Major</th>
+	            <th>Type</th>
+	            <th>Year</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        
+	    </tbody>
+	</table>
 </div>
-
-<script>
-	function loadJson() {
-		let response = fetch("./test.json")
-		.then(response => {
-			console.log(response);
-			if(response.status == 200) {
-				return response.json();
-			}
-		})
-		.then(jsondata => {
-			console.log(jsondata);
-			document.getElementById("school").innerHTML = "School : " + response["School"];
-			document.getElementById("program").innerHTML = "Program/Major : " + response["Program"];
-			document.getElementById("type").innerHTML = "Type : " + response["Type"];
-			document.getElementById("year").innerHTML = "Year : " + response["Year"];
-		});
-
-		// console.log('---------------');
-		// console.log(response);
-
-		// if(response.status == 200) {
-		// 	console.log(response);
-		// 	// var data = response.data
-		// 	document.getElementById("school").innerHTML = "School : " + response["School"];
-		// 	document.getElementById("program").innerHTML = "Program/Major : " + response["Program"];
-		// 	document.getElementById("type").innerHTML = "Type : " + response["Type"];
-		// 	document.getElementById("year").innerHTML = "Year : " + response["Year"];
-		// }
-	}
-</script>
 
 </body>
 </html>

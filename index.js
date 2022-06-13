@@ -16,10 +16,10 @@ function loadJson(){
 			var cel2 = row.insertCell(1);
 			var cel3 = row.insertCell(2);
 			var cel4 = row.insertCell(3);
-			cel1.innerHTML = jsondata["School"];
-			cel2.innerHTML = jsondata["Program"];
-			cel3.innerHTML = jsondata["Type"];
-			cel4.innerHTML = jsondata["Year"];
+			cel1.innerHTML = jsondata[i]["School"];
+			cel2.innerHTML = jsondata[i]["Program"];
+			cel3.innerHTML = jsondata[i]["Type"];
+			cel4.innerHTML = jsondata[i]["Year"];
 		}
     });
 }

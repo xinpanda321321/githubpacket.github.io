@@ -1,6 +1,12 @@
+[{
+	"School": "College",
+	"Program": "Engineering",
+	"Type": "BS",
+	"Year": 2020
+}, 
 {
-	"School": "New York International School",
-	"Program": "Javascript",
-	"Type": "AA",
+	"School": "Graduate School",
+	"Program": "Systems Engineering",
+	"Type": "MS",
 	"Year": 2022
-}
+}]

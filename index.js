@@ -1,3 +1,5 @@
+var count = 0;
+
 function loadJson(){
     let response = fetch("./test.json")
     .then(response => {
@@ -9,6 +11,7 @@ function loadJson(){
     })
     .then(jsondata => {
         console.log(jsondata);
+        count = jsondata.length
         for(let i = 0; i < jsondata.length; i++) {
 			var table = document.getElementById("myTable");
 			var row = table.insertRow(i + 1);
@@ -25,8 +28,7 @@ function loadJson(){
 }
 
 function clearAction(){
-    document.getElementById("school").innerHTML = "";
-    document.getElementById("program").innerHTML = "";
-    document.getElementById("type").innerHTML = "";
-    document.getElementById("year").innerHTML = "";
+    for(let i = 0; i < count; i++) {
+    	document.getElementById("myTable").deleteRow(i + 1);
+    }
 }

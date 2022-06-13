@@ -31,6 +31,6 @@ function loadJson(){
 
 function clearAction(){
     for(let i = 0; i < count; i++) {
-    	document.getElementById("myTable").deleteRow(i + 1);
+    	document.getElementById("myTable").deleteRow(1);
     }
 }
